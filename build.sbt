@@ -20,10 +20,10 @@ scmInfo := Some(
 )
 
 crossScalaVersions := Seq("2.10.0", "2.11.0")
-scalaVersion := "2.11.4"
+scalaVersion := "2.11.8"
 
 libraryDependencies ++= Seq(
-  "com.google.inject" % "guice"           % "3.0",
+  "com.google.inject" % "guice"           % "4.0",
   "junit"             % "junit"           % "4.11" % "test",
   "com.novocode"      % "junit-interface" % "0.11" % "test"
 )
