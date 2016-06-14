@@ -4,6 +4,8 @@ import ReleaseStateTransformations._
 name := "sse-guice"
 organization := "com.tzavellas"
 
+credentials += Credentials(Path.userHome / ".ivy2" / ".credentials")
+
 description := "Make the Guice EDSL more Scala friendly"
 homepage := Some(url("http://www.github.com/sptz45/sse-guice"))
 startYear := Some(2010)
@@ -38,11 +40,11 @@ publishMavenStyle := true
 publishArtifact in Test := false
 
 publishTo := {
-  val nexus = "https://oss.sonatype.org/"
+  val nexus = "http://192.168.60.87:8081/nexus/"
   if (isSnapshot.value)
     Some("snapshots" at nexus + "content/repositories/snapshots")
   else
-    Some("releases"  at nexus + "service/local/staging/deploy/maven2")
+    Some("releases"  at nexus + "content/repositories/releases")
 }
 
 pomExtra := (
